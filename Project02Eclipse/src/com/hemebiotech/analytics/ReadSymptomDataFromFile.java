@@ -56,7 +56,6 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 			for (String symptom : symptoms) {
 				map.put(symptom, map.containsKey(symptom) ? map.get(symptom) + 1 : 1);
 			}
-			Collections.sort(symptoms);
 		}
 		return map;
 
@@ -83,7 +82,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 			writer.write("aucun symptome n'a été trouvé");
 			writer.close();
 		}
-		System.out.println("Voir : result.out");
+		System.out.println("Voir le fichier : result.out");
 	}
 
 }
