@@ -5,14 +5,12 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
 /**
  * Simple brute force implementation
- *
  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
@@ -62,7 +60,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	}
 
 	/**
-	 * write symptoms and occurrences in "result.out file
+	 * write symptoms and occurrences in "result.out" file
 	 */
 	public void writeSymptomsAndOccurences(Map<String, Integer> mapSymptomsOccurences) throws IOException {
 

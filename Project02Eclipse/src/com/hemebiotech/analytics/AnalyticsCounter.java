@@ -1,7 +1,8 @@
- package com.hemebiotech.analytics;
+package com.hemebiotech.analytics;
 
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class AnalyticsCounter {
 
@@ -14,9 +15,9 @@ public class AnalyticsCounter {
 	}
 
 	/*
-	 * count occurrences of symptoms in a list and create a map of symptoms
+	 * count occurrences of symptoms in a list and create a treemap of symptoms
 	 */
-	public Map<String, Integer> count(List<String> symptoms) {
+	public TreeMap<String, Integer> count(List<String> symptoms) {
 		return readSymptomDataFromFile.getSymptomsOccurences(symptoms);
 	}
 

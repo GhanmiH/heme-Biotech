@@ -1,7 +1,7 @@
 package com.hemebiotech.analytics;
 
 import java.util.List;
-import java.util.Map;
+import java.util.TreeMap;
 
 public class MainProgram {
 
@@ -11,7 +11,7 @@ public class MainProgram {
 
 		List<String> symptoms = analyticsCounter.reading("symptoms.txt");
 
-		Map mapSymptomsOccurences = analyticsCounter.count(symptoms);
+		TreeMap<String, Integer> mapSymptomsOccurences = analyticsCounter.count(symptoms);
 
 		analyticsCounter.saving(mapSymptomsOccurences);
 
