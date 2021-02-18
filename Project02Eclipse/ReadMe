@@ -1,0 +1,20 @@
+Identification des problèmes
+J'ai commencé par analyser le code d'Alex. Cela m'a permis de comprendre l'algorithme qu'il a souhaité mettre en place :
+1.	Lire le fichier symptoms.txt ligne par ligne ;
+2.	Compter le nombre d'occurrences de chaque symptôme ;
+3.	Écrire le résultat dans le fichier « result.out »
+Le code d’Alex présente plusieurs bugs : 
+•	Il utilise une variable par symptôme. Cette approche est fastidieuse (puisqu'il faut ajouter une condition pour chaque symptôme) et non-viable (car on ne connaît pas d'avance tous les symptômes que l'on peut rencontrer) ;
+•	Les exceptions ne sont pas gérées.
+•	Il y a de nombreux commentaires inutiles (qui n'apportent aucune information réelle) ;
+Restructuration et correction du code
+Pour corriger et restructurer le code d’Alex j’ai commencé par : 
+1.	La lecture des symptômes : Créer la classe ReadSymptomDataFromFile qui implémente l’interface ISymptomReader. Cette classe contient la méthode getSymptomslire les symptômes ligne par ligne depuis un fichier texte. Cette méthode est traitée par un « try/ catch » pour traiter les exceptions et libérer les ressources. 
+2.	 Décompter et trier les symptômes : toujours dans la classe ReadSymptomDataFromFile j’ai implémenté la méthode getSymptomsOccurencesqui utilise TreeMap pour associer chaque symptôme à son nombre d'occurrences actuel et les trié par ordre alphabétique. 
+3.	Ecriture du résultat : j’ai implémenté la méthode writeSymptomsAndOccurencesqui pour tous les symptômes associés à ses occurrences et triés par ordre alphabétique, elle les écrit ligne par ligne dans un flux de sortie "result.out" Cette méthode est englobée par un « try – catch » pour traiter les exceptions.
+Assemblage
+Et finalement, j'ai assemblé les trois parties évoquées ci-dessus pour le programme final :
+•	Un ISymptomReader. est initialisé pour récupérer une List<String> de symptômes ;
+•	Cette partie est englobée dans un try-catch pour gérer les exceptions.
+•	Cette liste est envoyée à un ReadSymptomDataFromFile pour les compter, trier et afficher le résultat du comptage dans l’output Stream.
+o	Cette partie est englobée dans un try-catch pour gérer les exceptions.
