@@ -6,6 +6,7 @@ J'ai commencé par analyser le code d'Alex. Cela m'a permis de comprendre l'algo
 Le code d’Alex présente plusieurs bugs : 
 •	Il utilise une variable par symptôme. Cette approche est fastidieuse (puisqu'il faut ajouter une condition pour chaque symptôme) et non-viable (car on ne connaît pas d'avance tous les symptômes que l'on peut rencontrer) ;
 •	Les exceptions ne sont pas gérées.
+•	Les ressources ne sont pas libérées.
 •	Il y a de nombreux commentaires inutiles (qui n'apportent aucune information réelle) ;
 Restructuration et correction du code
 Pour corriger et restructurer le code d’Alex j’ai commencé par : 
